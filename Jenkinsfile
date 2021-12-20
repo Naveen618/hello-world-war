@@ -19,7 +19,7 @@ steps {
 stage ('deploy') {
 steps {
 	sh 'sudo chmod 777 /opt'
-	sh 'sudo cp -R /var/lib/jenkins/workspace/Test1/target/hello-world-war-1.0.0.war /opt/apache-tomcat-9.0.56/webapps'
+	sh 'sudo cp -R /var/lib/jenkins/workspace/Test1/target/hello-world-war-1.0.0 /opt/apache-tomcat-9.0.56/webapps'
 	sh 'echo "hello world"'    
     }
 }
