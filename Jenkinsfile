@@ -1,18 +1,17 @@
 pipeline {
 	agent any
-    stages ('checkout'){
-        stage('checkout') {
-            steps {	
-		
-                sh 'git clone https://github.com/Naveen618/hello-world-war'
+	stages {
+    stage ('checkout'){
+            steps {		
+                sh 'git clone https://github.com/Naveen618/hello-world-war.git'
             }
         }
-stages ('build'){
+stage ('build'){
 steps {
 sh 'mvn clean package'
 }
 }
-stages ('print') {
+stage ('print') {
 steps {
 	sh 'echo "hello world"'    
     }
