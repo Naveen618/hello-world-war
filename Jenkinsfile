@@ -1,5 +1,5 @@
 pipeline {
-    agent slave-3
+	agent any
     stages ('checkout'){
         stage('checkout') {
             steps {	
@@ -15,5 +15,7 @@ sh 'mvn clean package'
 stages ('print') {
 steps {
 	sh 'echo "hello world"'    
+    }
+}
     }
 }
